@@ -1,0 +1,42 @@
+Info General
+Instalar docker
+	 kubectl
+	 Minikube -> "Trabajar local"
+sudo usermod -a -G docker <usuario> -> agregar usuario al equipo de docker
+apt install terminator tmux wget -> instalar herramientas de ayuda
+
+
+conexion ssh
+ssh srv@192.168.1.139
+**Cifrar Base64**
+echo -n "postgres" | base64
+echo "postgres" | base64 -d
+
+
+##Docker##
+system status docker ->ver estado
+docker ps -> ver contenedores activos
+docker ps -a  -> todos los estados de los contenedores viejos y nuevos
+docker create helloworld:latest -> crear contenedor
+docker start <idcontenedor>
+       stop  <idcontenedor>
+
+##Minikube##
+minikube dashboard --url -> habilitar dashboard
+
+##K8##
+kubectl run <name> --image="imagedocker" --port:80 80
+kubectl expose pod kbilling --type=LoadBalancer --port=8080 --target-port=80  --> Exponer servicio
+kubectl api-versions ->version de la api
+kubectl apply -f ./ -> ejecutar los deployment 
+kubectl apply -f archivo.yml -> ejecutar los deployment individuales
+kubectl delete -f ./ -> elimina lo que esta creado en k8 no los archivos
+kubectl get all -> ver todo
+minikube ip -> ver ip de cluster
+docker build -t <imagendockerhub> --no-cache --buld-arg JAR_FILE=./*.jar .  -> generar imagen java en ruta especifica
+docker build -t helloworld:1.0 .     -> lo mismo que el anterior pero con etiqueta
+docker tag helloworld:1.0 helloworld:latest -> re-etiquetar
+docker tag helloworld:2.0 helloworld:latest -> re-etiquetar para organizar
+docker inspect <idcontenedor> -> ver el dockerfile del contenedor
+
+
