@@ -1,0 +1,37 @@
+--Terraform
+terraform fmt --recursive => para formatear el codigo
+
+.#Para hacer alias de comandos largos
+bash
+.#Listar namespace"ns"
+kubectl get ns
+.# listar pod de ns
+kubectl get pods -n <ns>
+.#Describir pods o ver lo que tiene dentro
+k describe pod < namepod > -n <ns>
+.#Listar todos con detalles
+kubectl get pods -A < namepod > < ns >
+.#Reiniciar pod
+kubectl rollout restart deployment < namepod "el nombre no debe incluir los numeros finales" > -n ns
+Ejemplo: kubectl rollout restart deployment mono -n wabims-pre
+#Ingresar a un pod
+ kubectl exec -it mono-65f79744d4-r8lhh -n wabims -- sh
+//verificar
+####
+*****Kubernetes ******
+#Listar Clusters
+kubectl config get-contexts
+#Entrar al cluster
+kubectl config use-context cgsp1weuakswebcgscomm001-admin
+#Listar todos los pods y ns
+kubectl get pods -A
+#Contar lineas
+kubectl get pods -A | wc -l
+#Listar nodos
+kubectl get node
+#describe nodes
+kubectl describe node <nombre del contexto>
+#Estado de los componentes del cluster
+kubectl get componentstatuses
+
+···················································
