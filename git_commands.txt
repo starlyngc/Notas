@@ -1,0 +1,40 @@
+#actualizar rama principal
+git pull origin main
+--
+#actualiza tu rama ubicandote dentro de ella
+git merge main
+
+#Pasos para subir git
+git checkcout main
+git pull
+git status
+git add .
+git commit -m "comentario"
+git push
+-----
+crear tags
+git tag
+git tag -a vx.x.xx -m "comentario"
+git push --tags
+--
+#ver historicos
+git config --global alias.logline "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+gitlogline
+--
+------
+#Clonar proyectos
+git clone <url>
+#Crear rama
+git branch
+#Ubicarse en nueva rama
+git checkout -b <nombrebranch>
+#Subir info a la rama
+Git push nombrexxxx
+#Probar repot
+git status
+
+--Url
+Secrets de terraform
+https://www.youtube.com/watch?v=QWW6UOq8CCs
+https://www.youtube.com/watch?v=gFLqGySHeFQ
