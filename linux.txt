@@ -1,0 +1,5 @@
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "<usuariox>&usrespro15051&cgsp1airvmll-rundck-01.sceu.corp"@cyberark.aacc.corp
+
+
+- lvextend -L +500M <sistema de ficheros>
+- xfs_growfs <sistema de ficheros>
